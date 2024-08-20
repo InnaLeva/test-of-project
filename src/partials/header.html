@@ -1,13 +1,51 @@
-<header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-menu">
+        <div class="logo-container">
+          <img src="../img/logo/logo.png" alt="Logo" class="logo-img" />
+          <h2 class="logo-text">jefferson*</h2>
+        </div>
 
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
+        <button class="open-menu-btn" type="button">
+          <svg class="mob-menu-btn" width="28" height="28">
+            <use href="../img/icons.svg#icon-menu-05"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-mob-menu visually-hidden">
+        <button type="button" class="modal-close-btn">
+          <svg class="icon-close" width="28" height="28">
+            <use href="../img/icons.svg#icon-x"></use>
+          </svg>
+        </button>
+        <div class="modal-menu visually-hidden">
+          <ul class="modal-list">
+            <li class="modal-list-item">About me</li>
+            <li class="modal-list-item">Benefits</li>
+            <li class="modal-list-item">Projects</li>
+            <li class="modal-list-item">FAQ</li>
+          </ul>
+          <a href="#footer" class="modal-order-button">Order the project</a>
+        </div>
+      </div>
+
+      
+      <nav class="nav-header visually-hidden">
+        <button type="button" class="header-menu-button">Menu</button>
+        <ul class="menu-list">
+          <li class="modal-list-item" href="#about-me">About me</li>
+          <li class="modal-list-item" href="#benefits">Benefits</li>
+          <li class="modal-list-item" href="#projects">Projects</li>
+          <li class="modal-list-item" href="#faq">FAQ</li>
+        </ul>
+      </nav>
+      <a href="#footer" class=" header-order-btn visually-hidden"> Order the project </a>
+    </div>
+  </div>
 </header>
+
+
+
+

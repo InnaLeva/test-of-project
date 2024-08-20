@@ -1,21 +1,27 @@
 {
-  "name": "vanilla-app-template",
+  "name": "light-summer-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/test-of-project/",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.5.2",
-    "glob": "^8.1.0"
+    "css-loader": "^7.1.2",
+    "glob": "^8.1.0",
+    "vite": "^5.3.5"
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "vite-plugin-full-reload": "^1.0.5",
-    "vite-plugin-html-inject": "^1.0.1"
+    "accordion-js": "^3.3.4",
+    "axios": "^1.7.4",
+    "modern-normalize": "^3.0.0",
+    "simplelightbox": "^2.14.3",
+    "swiper": "^11.1.9",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
   }
 }
