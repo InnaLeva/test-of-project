@@ -6,7 +6,8 @@
     flex-direction: column;
     gap: 64px;
     background-image: url('../img/footer/background-mob1x-min.png');
-
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 @media (min-resolution: 192dpi) {
@@ -496,7 +497,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-}
+}*/
 
 /* modal window  */
 
@@ -702,4 +703,4 @@
     .footer-modal {
         top: 20%;
     }
-}
+}*/
