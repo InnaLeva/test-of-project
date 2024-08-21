@@ -1,19 +1,91 @@
 
-document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector('.footer-form');
     const modal = document.getElementById('modal');
-  const closeModalBtn = document.querySelector('.footer-close-button');
-  
-  // Відстеження події на відправлення форми
-    form.addEventListener('submit', function(event) {
+    const closeModalBtn = document.querySelector('.footer-close-button');
+    const openModalBtn = document.querySelector('.footer-form-button');
+
+
+
+
+// Функція для обробки введення даних у форму
+        function handleFormInput(event) {
+          const value = event.target.value.trim();
+          const key = event.target.name.trim();
+
+          formData[key] = value;
+    
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+    
+          console.log(key, value);
+          // Перевірка введеної електронної пошти
+        if (key === "email") {
+            validateEmail(event.target);
+        }
+        }
+// Підтвердьте електронну адресу та надішліть коментар
+    function validateEmail(inputElement) {
+        const emailMessage = document.getElementById("email-message");
+        const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+        if (emailPattern.test(inputElement.value.trim())) {
+            emailMessage.textContent = "Success!";
+            emailMessage.classList.add("success");
+            emailMessage.classList.remove("error");
+        } else {
+            emailMessage.textContent = "Invalid email, try again";
+            emailMessage.classList.add("error");
+            emailMessage.classList.remove("success");
+      }
+}
+    
+      form.addEventListener('submit', function(event) {
       event.preventDefault(); // Перешкоджаємо стандартному відправленню форми
       
        // Перевірка валідності форми
-      if (form.checkValidity()) {
-        // Якщо форма валідна, відображаємо модальне вікно
-        modal.classList.add('is-open');
+        if (form.checkValidity()) {
+          // Якщо форма валідна, відображаємо модальне вікно
+          modal.classList.add('is-open');
           
-        const STORAGE_KEY = "feedback-form-state";
+          form.reset();
+        }
+      })
+
+// Закриття модального вікна
+    closeModalBtn.addEventListener('click', function() {
+        modal.classList.remove('is-open');
+    });
+
+    // Додатково закриваємо модальне вікно при кліку на фон
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.classList.remove('is-open');
+        }
+    });
+  
+     //закрити модальне вікно при натисканні на Esc
+window.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+    modal.classList.remove('is-open');
+  }
+    })
+
+
+
+
+
+
+
+
+
+
+
+/*document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector('.footer-form');
+    const modal = document.getElementById('modal');
+  const closeModalBtn = document.querySelector('.footer-close-button');
+   
+  
+  const STORAGE_KEY = "feedback-form-state";
 
         let formData = {
           email: "",
@@ -58,8 +130,16 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
           }
           localStorage.removeItem(STORAGE_KEY)
-         }
+}
+  // Відстеження події на відправлення форми
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Перешкоджаємо стандартному відправленню форми
       
+       // Перевірка валідності форми
+      if (form.checkValidity()) {
+        // Якщо форма валідна, відображаємо модальне вікно
+        modal.classList.add('is-open');
+          
           form.reset();
         
       }
@@ -87,7 +167,7 @@ window.addEventListener('keydown', (e) => {
       
     }
 })
-});
+});*/
 
 
 
