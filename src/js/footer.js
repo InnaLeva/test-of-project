@@ -58,14 +58,14 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
           }
           localStorage.removeItem(STORAGE_KEY)
-
+         }
       
           form.reset();
-        }
+        
       }
 
         // Можна відобразити повідомлення про помилку, якщо потрібно
-        form.classList.add('was-validated');
+        //form.classList.add('was-validated');
     });
 
     // Закриття модального вікна
