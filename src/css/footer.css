@@ -69,6 +69,40 @@
     color: #fafafa;
 }
 
+.footer-form-label-input:active {
+    background-color: inherit;
+
+}
+
+.footer-form-label-input.success {
+    border-bottom: 1px solid #3cbc81;
+}
+
+.footer-form-label-input:not(:placeholder-shown).error {
+    border-bottom: 1px solid #e74a3b;
+    }
+
+.input-span-message {
+    display: none;
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.28;
+        letter-spacing: -0.02em;
+    
+        margin-top: -12px;
+        margin-bottom: 16px;
+        width: 100%;
+}
+
+.footer-form-label-input.success+.input-span-message {
+    display: block;
+}
+
+.footer-form-label-input:not(:placeholder-shown).error+.input-span-message {
+    display: block;
+}
+
 .footer-form-button {
     margin-top: 16px;
     color: #fafafa;
@@ -80,8 +114,8 @@
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-form-button:hover,
-.footer-form-button:focus {
+.open-btn-hover:hover,
+.open-btn-hover:focus {
     background-color: #0039CF;
 }
 
