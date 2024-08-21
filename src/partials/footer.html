@@ -44,9 +44,9 @@
         pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="Email address" value="" required />
     </label>
     <label class="footer-form-label">
-      <input class="footer-form-label-input form-comments" type="text" name="comment" placeholder="comments" required />
+      <input class="footer-form-label-input form-comments" type="text" name="comments" placeholder="comments" required />
     </label>
-    <button type="submit" class="footer-form-button" disabled>Send</button>
+    <button type="submit" class="footer-form-button">Send</button>
   </form>
   <ul class="footer-contact-wrap-list">
     <li class="footer-contact-item">
@@ -60,8 +60,8 @@
   </ul>
   </div>
   <!------modal window-------->
-  <div class="footer-backdrop  is-open" id="modal">
-    <div class="footer-modal is-open">
+  <div class="footer-backdrop" id="modal">
+    <div class="footer-modal">
       <button type="button" class="footer-close-button">
         <svg class="footer-icon-close" width="22" height="22">
           <use href="../img/icons.svg#icon-x"></use>
@@ -75,4 +75,6 @@
     </div>
   
   </div>
+
+  <script type="module" src="../js/footer.js"></script>
   </footer>

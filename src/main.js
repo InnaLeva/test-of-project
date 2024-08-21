@@ -12,7 +12,7 @@ import { handleScroll } from './js/cover';
 
 import { fetchReviews, swiper } from './js/reviews';
 
-import { } from './js/footer';
+import {handleFormInput, populateForm, handleFormSubmit } from './js/footer';
 
 
 
